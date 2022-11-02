@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">App Primeiro Cliente</string>
+    <string name="app_promocao">
+        Estamos com 30% de desconto para este produtos apenas para pedidos via nosso aplicativo. Ligue e fale diretamente com nossa equipe para descobrir a lista de produtos em promoção. Telefone exclusivo para esta oferta, ligue (99) 99999-9999.
+    </string>
+</resources>
