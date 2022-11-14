@@ -1,9 +1,11 @@
-package com.laisleal.primeirocliente;
+package com.laisleal.primeirocliente.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+
+import com.laisleal.primeirocliente.R;
 
 public class MainActivity extends AppCompatActivity {
 

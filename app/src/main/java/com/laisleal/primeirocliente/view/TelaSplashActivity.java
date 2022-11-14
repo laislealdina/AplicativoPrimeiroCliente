@@ -1,4 +1,4 @@
-package com.laisleal.primeirocliente;
+package com.laisleal.primeirocliente.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+
+import com.laisleal.primeirocliente.R;
 
 public class TelaSplashActivity extends AppCompatActivity {
 
