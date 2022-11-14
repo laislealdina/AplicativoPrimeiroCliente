@@ -2,7 +2,9 @@ package com.laisleal.primeirocliente.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -20,6 +22,7 @@ public class TelaSplashActivity extends AppCompatActivity {
     private TextView txtVersao;
     private ClienteController clienteController;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +34,38 @@ public class TelaSplashActivity extends AppCompatActivity {
         clienteController = new ClienteController();
 
         trocarTela();
+        criarArquivoEstoque();
     }
+
+    public void criarArquivoEstoque() {
+
+        SharedPreferences sharedPreferences;
+        String PREF_NOME = "estoque";
+
+        SharedPreferences.Editor dados;
+        String nomeProduto = "Notebook";
+        int codigoProduto = 123;
+        float precoProduto = 5000;
+        boolean estoqueProduto = true;
+
+        sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
+        Log.d(AppUtil.TAG, "Pasta criada!");
+
+        dados = sharedPreferences.edit();
+        dados.putString("nomeProduto", nomeProduto);
+        dados.putInt("codigoProduto", codigoProduto);
+        dados.putFloat("precoProduto", precoProduto);
+        dados.putBoolean("estoqueProduto", estoqueProduto);
+
+        dados.apply();
+
+        Log.i(AppUtil.TAG, "criarArquivoEstoque - nomeProduto: " + sharedPreferences.getString("nomeProduto", "Fora de estoque"));
+        Log.i(AppUtil.TAG, "criarArquivoEstoque - codigoProduto: " + sharedPreferences.getInt("codigoProduto", -1));
+        Log.i(AppUtil.TAG, "criarArquivoEstoque - precoProduto: " + sharedPreferences.getFloat("precoProduto", 1.0f));
+        Log.i(AppUtil.TAG, "criarArquivoEstoque - estoqueProduto: " + sharedPreferences.getBoolean("estoqueProduto", false));
+
+    }
+
     public void trocarTela() {
         Log.d(AppUtil.TAG, "trocarTela: Iniciando troca de tela..");
 
