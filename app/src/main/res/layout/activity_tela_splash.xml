@@ -32,12 +32,11 @@
         tools:layout_editor_absoluteY="446dp" />
 
     <TextView
-        android:id="@+id/versao"
+        android:id="@+id/txtVersao"
         android:textColor="@color/yellow"
         android:textSize="22sp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Versao 1.0" />
+        android:layout_height="wrap_content" />
 </LinearLayout>
