@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.laisleal.primeirocliente.R;
 import com.laisleal.primeirocliente.controller.ClienteController;
-import com.laisleal.primeirocliente.core.AppUtil;
+import com.laisleal.primeirocliente.api.AppUtil;
 import com.laisleal.primeirocliente.model.Cliente;
 
 public class TelaSplashActivity extends AppCompatActivity {

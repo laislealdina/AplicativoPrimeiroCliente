@@ -2,7 +2,7 @@ package com.laisleal.primeirocliente.controller;
 
 import android.util.Log;
 
-import com.laisleal.primeirocliente.core.AppUtil;
+import com.laisleal.primeirocliente.api.AppUtil;
 
 public class ClienteController {
 

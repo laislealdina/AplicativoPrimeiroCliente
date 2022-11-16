@@ -1,12 +1,19 @@
 package com.laisleal.primeirocliente.model;
 
-public class Cliente {
+import android.util.Log;
+
+import com.laisleal.primeirocliente.api.AppUtil;
+import com.laisleal.primeirocliente.controller.ICrud;
+
+public class Cliente implements ICrud {
 
     private String nome;
     private String email;
     private String telefone;
     private int idade;
     private boolean sexo;
+
+    public Cliente() {}
 
     public Cliente(String nome, String email, String telefone, int idade, boolean sexo) {
         this.nome = nome;
@@ -54,5 +61,26 @@ public class Cliente {
 
     public void setSexo(boolean sexo) {
         this.sexo = sexo;
+    }
+
+    @Override
+    public void incluir() {
+        Log.i(AppUtil.TAG, "Incluir Cliente.");
+    }
+
+    @Override
+    public void alterar() {
+        Log.i(AppUtil.TAG, "Alterar CLiente.");
+    }
+
+    @Override
+    public void deletar() {
+        Log.i(AppUtil.TAG, "Deletar Cliente.");
+    }
+
+    @Override
+    public void listar() {
+        Log.i(AppUtil.TAG, "Listar Cliente");
+
     }
 }

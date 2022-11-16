@@ -1,4 +1,4 @@
-package com.laisleal.primeirocliente.core;
+package com.laisleal.primeirocliente.api;
 
 public class AppUtil {
 
